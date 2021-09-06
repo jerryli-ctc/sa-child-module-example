@@ -24,6 +24,6 @@ variable "subscription_id" {
   type = string 
 }
 
-variable "tenent_id" {
+variable "tenant_id" {
   type = string
 }
