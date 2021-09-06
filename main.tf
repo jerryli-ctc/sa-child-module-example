@@ -8,6 +8,13 @@ terraform {
 }
 
 provider "azurerm" {
+  #Add subscription_id and tenant_id to avoid "az login" error message:
+  #Error: Error building AzureRM Client: obtain subscription() from Azure CLI: Error parsing json result from the Azure CLI: Error waiting for the Azure CLI: exit status 1: ERROR: Please run 'az login' to setup account.
+  #with provider["registry.terraform.io/hashicorp/azurerm"]
+  #on main.tf line 10, in provider "azurerm":
+provider "azurerm" {
+  subscription_id = var.subscription_id
+  tenant_id       = var.tenant_id
   features {}
 }
 
