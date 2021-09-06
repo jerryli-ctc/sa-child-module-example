@@ -19,3 +19,11 @@ variable "client_id" {
 variable "client_secret" {
   type = string
 }
+
+variable "subscription_id" {
+  type = string 
+}
+
+variable "tenent_id" {
+  type = string
+}
