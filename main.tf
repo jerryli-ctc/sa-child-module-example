@@ -14,6 +14,7 @@ provider "azurerm" {
   #on main.tf line 10, in provider "azurerm":
   subscription_id = var.subscription_id
   tenant_id       = var.tenant_id
+  client_id       = var.client_id
   features {}
 }
 
